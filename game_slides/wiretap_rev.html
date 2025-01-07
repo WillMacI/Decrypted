@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Player with Waveform</title>
+  <script src="https://unpkg.com/wavesurfer.js"></script>
+</head>
+<body>
+<b><u>Return to the game once you are done listening, you can close this window.</u></b>
+<h1>Wiretap</h1>
+<p>Phone call between Jose Laraya (suspect 1) and Gordon Ramer (John Doe 1). </p>
+<div id="waveform"></div>
+<button onclick="playPause()">Play/Pause</button>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var wavesurfer = WaveSurfer.create({
+      container: '#waveform',
+      waveColor: 'violet',
+      progressColor: 'purple'
+    });
+
+    // Load your audio file
+    wavesurfer.load('wiretap_rev.mp3'); // Replace with your file's path
+
+    // Function to toggle play/pause
+    window.playPause = function() {
+      wavesurfer.playPause();
+    };
+
+    // Function to toggle audio direction
+    window.reverseAudio = function() {
+      wavesurfer.backend.setReverse(!wavesurfer.backend.isReversed);
+      wavesurfer.drawBuffer();
+    };
+  });
+
+
+</script>
+
+</body>
+</html>

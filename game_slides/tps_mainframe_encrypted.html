@@ -1,0 +1,84 @@
+<div class="alert alert-danger" role="alert">
+    <h5 class="alert-heading">Danger</h5>
+    These files are encrypted.
+    <a class="link" href="#enigma-problem-2" role="button" class="btn btn-link" data-bs-toggle="modal">Upload Decryption Key</a>
+</div>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">File Name</th>
+        <th scope="col">Confidentiality Level</th>
+        <th scope="col">Last Opened</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row" class="link-danger">26_mar_74_search</th>
+        <td>Confidential</td>
+        <td>Unknown</td>
+    </tr>
+    <tr>
+        <th scope="row" class="link-danger">Beatrice_Worsley_Report</th>
+        <td>Top Secret</td>
+        <td>Unknown</td>
+    </tr>
+    <tr>
+        <th scope="row" class="link-danger">hex_to_audio.html</th>
+        <td>Unclassified</td>
+        <td>Unknown</td>
+    </tr>
+    <tr>
+        <th scope="row" class="link-danger">Jose_Laraya_Report</th>
+        <td>Confidential</td>
+        <td>Unknown</td>
+    </tr>
+    <tr>
+        <th scope="row" class="link-danger">map.html</th>
+        <td>Unclassified</td>
+        <td>Unknown</td>
+    </tr>
+    <tr>
+        <th scope="row" class="link-danger">Mers_Kutt_Report</th>
+        <td>Top Secret</td>
+        <td>Unknown</td>
+    </tr>
+    <tr>
+        <th scope="row" class="link-danger">wiretap</th>
+        <td>Secret</td>
+        <td>Unknown</td>
+    </tr>
+    <tr>
+        <th scope="row" class="link-danger">wiretap.html</th>
+        <td>Secret</td>
+        <td>Unknown</td>
+    </tr>
+    <tr>
+        <th scope="row" class="link-danger">wiretap.mp3</th>
+        <td>Confidential</td>
+        <td>Unknown</td>
+    </tr>
+    </tbody>
+</table>
+<div class="modal fade" id="enigma-problem-2" tabindex="-1" aria-labelledby="enigma-problem-2" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modal-title-1">Decryption Tool</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label class="form-label" for="cipher-text-P2">Cipher Text</label>
+                    <input type="text" class="form-control" id="cipher-text-P2" readonly value="nzzan cvz">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="plain-text-P2">Plain Text Password</label>
+                    <input type="text" class="form-control" id="plain-text-P2">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="check_ans_problem_2()">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>

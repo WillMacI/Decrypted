@@ -1,0 +1,86 @@
+<!--index.ejs-->
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Decrypted</title>
+
+  <!-- Halfmoon CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/halfmoon@2.0.1/css/halfmoon.min.css" rel="stylesheet" integrity="sha256-SsJizWSIG9JT9Qxbiy8xnYJfjCAkhEQ0hihxRn7jt2M=" crossorigin="anonymous">
+  <!-- WaveSurfer.js -->
+  <script src="https://unpkg.com/wavesurfer.js@7.8.4/dist/wavesurfer.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWj9sIASUbmNnRLtw2WcWocRbnrqjdm4k&callback=initMap&libraries=&v=weekly" async defer></script>
+  <style>
+    /* Set the size of the map */
+    #map {
+      height: 400px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+<br>
+<div class="container">
+  <h1>Decrypted</h1>
+  <hr>
+  <div class="row">
+    <div class="col-9">
+      <!-- Game -->
+      <div class="card">
+        <div class="card-header">Game</div>
+
+        <div class="card-body" id="game">
+          <div class="game" id="content">
+
+          </div>
+          <div id="map" style="display: none"></div>
+          <div id="game-log"></div>
+
+        </div>
+      </div>
+
+    </div>
+    <div class="col">
+      <!-- Score -->
+      <div class="card">
+        <div class="card-header">Score</div>
+        <div class="card-body">
+          <h2 class="card-text">
+            <code id="score">0000</code>
+          </h2>
+        </div>
+      </div>
+      <br>
+      <!-- Score -->
+      <div class="card">
+        <div class="card-header">Directions</div>
+        <div class="card-body">
+          <p class="card-text" id="direction">
+            Game directions will appear here.
+          </p>
+        </div>
+      </div>
+      <br>
+      <!-- Hints -->
+      <div class="card">
+        <div class="card-header">Hints</div>
+        <div class="card-body">
+          <p class="card-text" id="hint">
+
+          </p>
+          <button type="button" class="btn btn-primary" id="hint_button" onclick="get_hint()">Get Hint</button>
+          <p><code id="countdown" style="display: none"></code></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Option 1: Bootstrap JS bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="./game.js"></script>
+</body>
+</html>
